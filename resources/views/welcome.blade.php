@@ -349,6 +349,55 @@
                 </div>
             </div>
         </section>
+
+        <footer class="bg-light">
+            <div class="container">
+                <div class="row py-5 mt-5">
+                    <div class="col-md-4 col-sm-12 text-center">
+                        <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" height="24" class="d-inline-block align-text-top" />
+                        <div class="d-flex mt-2 justify-content-center">
+                            <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/twitter.svg')}}" alt=""></a>
+                            <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/instagram.svg')}}" alt=""></a>
+                            <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/linkedin.svg')}}" alt=""></a>
+                            <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/facebook.svg')}}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 fw-bolder">Member Area</li>
+                            <li class="mb-2">Sign Up</li>
+                            <li class="mb-2">Login</li>
+                            <li class="mb-2">Forget Password</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 fw-bolder">Small Converter</li>
+                            <li class="mb-2 ">Blog</li>
+                            <li class="mb-2 ">Testominals</li>
+                            <li class="mb-2 ">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 fw-bolder">Company</li>
+                            <li class="mb-2">Terms & Conditions</li>
+                            <li class="mb-2">Privacy</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 fw-bolder">Support</li>
+                            <li class="mb-2">Help</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <p>&copy;	{{\Carbon\Carbon::now()->year}} Small Converter Tools</p>
+                </div>
+            </div>
+        </footer>
         <script src="{{ asset('assets/bootstrap-5.2.0-dist/js/bootstrap.min.js') }}"></script>
     </body>
 </html>
