@@ -24,7 +24,7 @@
         <nav class="navbar sticky-top navbar-expand-lg bg-light">
             <div class="container">
                 <a class="navbar-brand" href="{{route('/')}}">
-                    <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" height="24" class="d-inline-block align-text-top" />
+                    <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" class="d-inline-block align-text-top" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,9 @@
         </div>
         --}}
         <section class="bg-light" id="advertisement">
-            <div class="container jumbotron bg-secondary h-169 d-flex justify-content-center align-items-center">Advertisement</div>
+            <div class="container">
+                <div class=" jumbotron bg-secondary h-169 d-flex justify-content-center align-items-center">Advertisement</div>
+            </div>
         </section>
         <header class="bg-light h-35">
             <div class="container pt-5">
@@ -382,7 +384,7 @@
             <div class="container">
                 <div class="row py-5 mt-5">
                     <div class="col-md-4 col-sm-12 text-center">
-                        <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" height="24" class="d-inline-block align-text-top" />
+                        <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" class="d-inline-block align-text-top" />
                         <div class="d-flex mt-2 justify-content-center">
                             <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/twitter.svg')}}" alt=""></a>
                             <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/instagram.svg')}}" alt=""></a>
