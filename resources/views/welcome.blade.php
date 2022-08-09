@@ -313,9 +313,13 @@
             </div>
             {{-- /* -------------------------- convert to image ends ------------------------- */ --}}
         </div>
+        <svg viewBox="0 60 500 50" class="rotate-x-180">
+            <path d="M0,80 C150,150 300,30 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#f8f9fa;"></path>
+          </svg>
         <section class="bg-light">
+
             <div class="container">
-                <div class="row text-center bg-light my-5">
+                <div class="row text-center bg-light">
                     <h2 class="my-3 fw0vold">Why Choose Small Convertrer Tools</h2>
                     <div class="col-md-4 col-sm-6 mb-md-4">
                         <img src="{{asset('assets/icons/bulb.svg')}}" class="mb-3" alt="icon" srcset="">
@@ -350,11 +354,16 @@
                 </div>
             </div>
         </section>
-        <h2 class="text-center fw-bold">Ratings and Reviews</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, illo hic. Aperiam voluptatem </p>
-        <p class="text-center text-muted"><b class="fw-bold text-warning">4.9</b> out of 5  — <small>23 Ratings</small></p>
-        <div class="container bg-537895">
-
+        <svg viewBox="0 60 500 50" class="rotate-y-180">
+            <path d="M0,80 C150,150 300,30 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#f8f9fa;"></path>
+        </svg>
+        <div class="container">
+            <h2 class="text-center fw-bold">Ratings and Reviews</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, illo hic. Aperiam voluptatem </p>
+            <p class="text-center text-muted"><b class="fw-bold text-warning">4.9</b> out of 5  — <small>23 Ratings</small></p>
+            <div class="bg-537895">
+                
+            </div>
         </div>
         <div class="container text-center ">
             <img src="{{asset('assets/icons/open-email.svg')}}" alt="" srcset="">

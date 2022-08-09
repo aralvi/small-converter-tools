@@ -51,7 +51,18 @@
     background-color: #FCF6FF !important;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  other css                                 */
+/* -------------------------------------------------------------------------- */
 .cursor-pointer
 {
     cursor: pointer;
 }
+
+.rotate-x-180{
+    transform: rotateX(180deg);
+}
+.rotate-y-180{
+    transform: rotateY(180deg);
+}
+
