@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Laravel</title>
+        <title>{{env('APP_NAME')}}</title>
         <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.2.0-dist/css/bootstrap.min.css') }}" />
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -74,8 +74,8 @@
         </div>
         --}}
         <header class="bg-light h-35">
-            <div class="container">
-                <div class="jumbotron bg-secondary my-4 h-169 d-flex justify-content-center align-items-center">Advertisement</div>
+            <div class="container pt-5">
+                <div class="jumbotron bg-secondary mb-5 h-169 d-flex justify-content-center align-items-center">Advertisement</div>
                 <h1 class="cl-537895 text-center fw-bolder">File Converter</h1>
                 <p class="text-center">Convert your files to any format</p>
                 <p class="text-center">We have converted <b class="cl-537895">1,545,407,398</b> with a total size of <b class="cl-537895">30,750</b> TB</p>
