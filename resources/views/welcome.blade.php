@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>{{env('APP_NAME')}}</title>
+        <link rel="shortcut icon" href="{{asset('assets/icons/favicon.png')}}" type="image/x-icon">
         <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.2.0-dist/css/bootstrap.min.css') }}" />
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -350,6 +351,17 @@
             </div>
         </section>
 
+        <div class="container text-center ">
+            <img src="{{asset('assets/icons/open-email.svg')}}" alt="" srcset="">
+            <small class="d-block my-2">Subscribe to our newsletter and stay updated</small>
+            <form action="" method="post" class="my-4">
+                <div class="input-group w-50 m-auto">
+                    <input type="email" name="email" class="form-control w-50 m-auto" placeholder="Enter Your Email address">
+                    <img src="{{asset('assets/icons/subscribe-btn.svg')}}" alt="" srcset="">
+                </div>
+            </form>
+            <img src="{{asset('assets/icons/newsletter.svg')}}" class="w-75" alt="" srcset="">
+        </div>
         <footer class="bg-light">
             <div class="container">
                 <div class="row py-5 mt-5">
