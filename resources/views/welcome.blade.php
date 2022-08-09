@@ -365,12 +365,28 @@
             <h2 class="text-center fw-bold">Ratings and Reviews</h2>
             <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, illo hic. Aperiam voluptatem </p>
             <p class="text-center text-muted"><b class="fw-bold text-warning">4.9</b> out of 5  — <small>23 Ratings</small></p>
-            <div class="bg-537895">
+            <div class="bg-537895 position-relative rounded" style="height: 400px;">
+                <div class=" position-absolute rounded-circle bg-537895 p-3 top-30 left-50 border border-white">
+                    <img src="{{asset('assets/icons/quote.svg')}}" width="50px" alt="">
 
+                </div>
             </div>
         </div>
-        <div class="container text-center ">
-            <img src="{{asset('assets/icons/open-email.svg')}}" alt="" srcset="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container text-center  mt-5">
+            <img src="{{asset('assets/icons/open-email.svg')}}" width="100px" alt="" srcset="">
             <small class="d-block my-2">Subscribe to our newsletter and stay updated</small>
             <form action="" method="post" class="my-4">
                 <div class="input-group w-50 m-auto">
