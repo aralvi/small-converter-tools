@@ -383,7 +383,7 @@
         <footer class="bg-light">
             <div class="container">
                 <div class="row py-5 mt-5">
-                    <div class="col-md-4 col-sm-12 text-center">
+                    <div class="col-md-4 col-sm-12 ">
                         <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300" class="d-inline-block align-text-top" />
                         <div class="d-flex mt-2 justify-content-center">
                             <a href="javascript::void(0)"><img src="{{asset('assets/icons/social-icons/twitter.svg')}}" alt=""></a>
