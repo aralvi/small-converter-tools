@@ -350,7 +350,12 @@
                 </div>
             </div>
         </section>
+        <h2 class="text-center fw-bold">Ratings and Reviews</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, illo hic. Aperiam voluptatem </p>
+        <p class="text-center text-muted"><b class="fw-bold text-warning">4.9</b> out of 5  — <small>23 Ratings</small></p>
+        <div class="container bg-537895">
 
+        </div>
         <div class="container text-center ">
             <img src="{{asset('assets/icons/open-email.svg')}}" alt="" srcset="">
             <small class="d-block my-2">Subscribe to our newsletter and stay updated</small>
