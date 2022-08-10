@@ -170,12 +170,17 @@
                 </div>
             @endif -->
         </div> --}}
+
+    {{-- /* -------------------------- advertisement section starts ------------------------- */ --}}
+
     <section class="bg-light" id="advertisement">
         <div class="container">
             <div class=" jumbotron bg-secondary h-169 d-flex justify-content-center align-items-center">Advertisement
             </div>
         </div>
     </section>
+    {{-- /* -------------------------- advertisement section ends ------------------------- */ --}}
+    
     <header class="bg-light h-35">
         <div class="container pt-5">
             <h1 class="cl-537895 text-center fw-bolder">File Converter</h1>
@@ -224,6 +229,7 @@
         </div>
     </header>
 
+    {{-- /* ------------------------------ tools started ----------------------------- */ --}}
     <div class="container" id="toolsToConvert">
         {{-- /* ----------------------------- convert to pdf start ----------------------------- */ --}}
         <div class="row d-flex justify-content-around" id="convertToPDF">
@@ -239,6 +245,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/word-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -254,6 +261,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/excel-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -269,6 +277,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/ppt-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -284,6 +293,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/ebooks-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -298,6 +308,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/iwork-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -317,6 +328,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/pdf-to-word.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -332,6 +344,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/pdf-to-excel.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -347,6 +360,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/pdf-to-ppt.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -365,6 +379,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -380,6 +395,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -398,6 +414,7 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -413,12 +430,15 @@
                     </p>
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
+                        <a href="javascript::void(0)" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
         </div>
         {{-- /* -------------------------- convert to image ends ------------------------- */ --}}
     </div>
+    {{-- /* ------------------------------- tools ends ------------------------------- */ --}}
+    {{-- /* -------------------------- why we choose starts -------------------------- */ --}}
     <svg viewBox="0 60 500 50" class="rotate-x-180">
         <path d="M0,80 C150,150 300,30 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#f8f9fa;"></path>
     </svg>
@@ -469,6 +489,8 @@
     <svg viewBox="0 60 500 50" class="rotate-y-180">
         <path d="M0,80 C150,150 300,30 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#f8f9fa;"></path>
     </svg>
+    {{-- /* -------------------------- why we choose ends -------------------------- */ --}}
+    {{-- /* -------------------------- testomonials starts -------------------------- */ --}}
     <div class="container">
         <h2 class="text-center fw-bold">Ratings and Reviews</h2>
         <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, illo hic. Aperiam
@@ -729,19 +751,8 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    {{-- /* -------------------------- testomonials ends -------------------------- */ --}}
+    {{-- /* -------------------------- newsletter starts -------------------------- */ --}}
     <div class="container text-center  mt-5">
         <img src="{{ asset('assets/icons/open-email.svg') }}" width="100px" alt="" srcset="">
         <small class="d-block my-2">Subscribe to our newsletter and stay updated</small>
@@ -754,6 +765,8 @@
         </form>
         <img src="{{ asset('assets/icons/newsletter.svg') }}" class="w-75" alt="" srcset="">
     </div>
+    {{-- /* -------------------------- newsletter ends -------------------------- */ --}}
+    {{-- /* -------------------------- footer starts -------------------------- */ --}}
     <footer class="bg-light">
         <div class="container">
             <div class="row py-5 mt-5">
@@ -807,6 +820,7 @@
             </div>
         </div>
     </footer>
+    {{-- /* -------------------------- footer starts -------------------------- */ --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/bootstrap.min.js') }}"></script>
