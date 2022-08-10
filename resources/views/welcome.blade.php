@@ -17,7 +17,33 @@
     <link rel="stylesheet" href="{{ asset('assets/style/custom.css') }}" />
 </head>
 
-<body class="antialiased">
+<style type="text/css">
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:10px;right: 10px; width:90%; margin-top:-1px;  }
+
+}
+/* ============ desktop view .end// ============ */
+
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+		overflow-y: auto;
+	    max-height: 90vh;
+	    margin-top:10px;
+	}
+}
+/* ============ mobile view .end// ============ */
+</style>
+<body>
+
+
+
+
     <nav class="navbar sticky-top navbar-expand-lg bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('/') }}">
@@ -31,10 +57,79 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="#"><img
-                                src="{{ asset('assets/icons/tools.svg') }}" alt="" srcset="" /> Tools</a>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link " href="#" data-bs-toggle="dropdown"><img src="{{ asset('assets/icons/tools.svg') }}" alt="" srcset="" /> Tools</a>
+
+                        <div class="dropdown-menu megamenu m-auto" role="menu">
+                        <div class="row g-3 ">
+                            <div class="col-lg-3 col-6">
+                                <div class="col-megamenu">
+                                    <h6 class="title">Convert to PDF</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/word-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> Word to PDF</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/excel-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> Excel to PDF</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/ppt-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> Power Point to PDF</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/ebooks-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> eBooks to PDF</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/iwork-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> iWork to PDF</a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div><!-- end col-3 -->
+                            <div class="col-lg-3 col-6">
+                                <div class="col-megamenu">
+                                    <h6 class="title">Convert From PDF</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/pdf-to-word.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PDF to Word</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/pdf-to-excel.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PDF to Excel</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/pdf-to-ppt.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PDF to Power Point</a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div><!-- end col-3 -->
+                            <div class="col-lg-3 col-6">
+                                <div class="col-megamenu">
+                                    <h6 class="title">Convert To Image</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/pdf-to-img.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PDF to JPG</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/pdf-to-img.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PDF to PNG</a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="col-megamenu">
+                                    <h6 class="title">Convert From Image</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/img-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> JPG to PDF</a></li>
+                                        <li class="mt-2"><img width="25px" src="{{asset('assets/icons/img-to-pdf.svg')}}" />&nbsp;&nbsp;<a href="#" class="stretched-linkh text-dark text-decoration-none"> PNG to PDF</a></li>
+                                    </ul>
+                                </div>  <!-- col-megamenu.// -->
+                            </div><!-- end col-3 -->
+                        </div><!-- end row -->
+                    </div>
+
                     </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     {{-- @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
@@ -713,7 +808,7 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/owl/js/owl.carousel.js') }}"></script>
     <script>
