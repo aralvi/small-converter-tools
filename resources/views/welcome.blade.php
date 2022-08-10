@@ -15,12 +15,6 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/owl/css/owl.theme.css') }}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('assets/style/custom.css') }}" />
-
-    <style>
-        body {
-            font-family: "Nunito", sans-serif;
-        }
-    </style>
 </head>
 
 <body class="antialiased">
