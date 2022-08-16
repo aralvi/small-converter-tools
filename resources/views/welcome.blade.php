@@ -12,8 +12,8 @@
                 class="cl-537895">30,750</b> TB</p>
         <h2 class="text-center fw-bold mt-5">Converter tools</h2>
         <div class="row justify-content-around my-5">
-            <div class="card bg-537895 text-light w-15 my-2">
-                <div class="card-body text-center">
+            <div class="card bg-537895 converter-tools-card text-light w-15 my-2">
+                <div class="card-body converter-tools text-center">
                     <h5 class="card-title fw-bold">Convert To PDF</h5>
                     <img src="{{ asset('assets/icons/convert-to-pdf.svg') }}" alt="" srcset="" />
                     <p class="card-text">Easily convert your PDF files into easy to edit DOC and DOCX documents.
@@ -60,8 +60,8 @@
     {{-- /* ----------------------------- convert to pdf start ----------------------------- */ --}}
     <div class="row d-flex justify-content-around" id="convertToPDF">
         <h2 class="text-center fw-bold mt-5">Convert To PDF</h2>
-        <div class="card bg-F9FDFF border border-info w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-F9FDFF converter-tools-card border border-info w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">Word to PDF</h5>
                 <hr class="border border-info" />
                 <p class="card-text">
@@ -69,14 +69,14 @@
                     to convert your <br />
                     Word to PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/word-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-F6FFFA border border-success w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-F6FFFA converter-tools-card border border-success w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">Excel To PDF</h5>
                 <hr class="border border-success" />
                 <p class="card-text">
@@ -85,14 +85,14 @@
                     Excel file to editable <br />
                     PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/excel-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-FFF9F5 border border-danger w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FFF9F5 converter-tools-card border border-danger w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">Power Point To PDF</h5>
                 <hr class="border border-danger" />
                 <p class="card-text">
@@ -101,14 +101,14 @@
                     Power point to PDF <br />
                     file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/ppt-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-FFEDDE border border-danger w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FFEDDE converter-tools-card border border-danger w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">eBooks To PDF</h5>
                 <hr class="border border-warning" />
                 <p class="card-text">
@@ -117,14 +117,14 @@
                     eBooksto to PDF <br />
                     file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/ebooks-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-F9F9F9 border border-dark w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-F9F9F9 converter-tools-card border border-dark w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">iWork To PDF</h5>
                 <hr class="border border-dark" />
                 <p class="card-text">
@@ -132,7 +132,7 @@
                     to convert your <br />
                     iWork to PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/iwork-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
@@ -143,8 +143,8 @@
 
     <div class="row d-flex justify-content-around" id="convertFromPDF">
         <h2 class="text-center fw-bold mt-5">Convert From PDF</h2>
-        <div class="card bg-F9FDFF border border-info w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-F9FDFF converter-tools-card border border-info w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PDF to Word</h5>
                 <hr class="border border-info" />
                 <p class="card-text">
@@ -152,14 +152,14 @@
                     to convert your <br />
                     Word to PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-word.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-F6FFFA border border-success w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-F6FFFA converter-tools-card border border-success w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PDF To Excel</h5>
                 <hr class="border border-success" />
                 <p class="card-text">
@@ -168,14 +168,14 @@
                     Excel file to editable <br />
                     PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-excel.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-FFF9F5 border border-danger w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FFF9F5 converter-tools-card border border-danger w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PDF To Power Point</h5>
                 <hr class="border border-danger" />
                 <p class="card-text">
@@ -184,7 +184,7 @@
                     Power point to PDF <br />
                     file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-ppt.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
@@ -194,8 +194,8 @@
     {{-- /* -------------------------- convert from pdf ends ------------------------- */ --}} {{-- /* ---------------------------- convert to image start ---------------------------- */ --}}
     <div class="row d-flex justify-content-around" id="convertToImage">
         <h2 class="text-center fw-bold mt-5">Convert To Image</h2>
-        <div class="card bg-FCF6FF border border-info w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FCF6FF converter-tools-card border border-info w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PDF to JPG</h5>
                 <hr class="border border-info" />
                 <p class="card-text">
@@ -203,14 +203,14 @@
                     to convert your <br />
                     Word to PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-FCF6FF border border-success w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FCF6FF converter-tools-card border border-success w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PDF To PNG</h5>
                 <hr class="border border-success" />
                 <p class="card-text">
@@ -219,7 +219,7 @@
                     Excel file to editable <br />
                     PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
@@ -229,8 +229,8 @@
     {{-- /* -------------------------- convert to image ends ------------------------- */ --}} {{-- /* ---------------------------- convert from image start ---------------------------- */ --}}
     <div class="row d-flex justify-content-around" id="convertFromImage">
         <h2 class="text-center fw-bold mt-5">Convert From Image</h2>
-        <div class="card bg-FCF6FF border border-info w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FCF6FF converter-tools-card border border-info w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">JPG to PDF</h5>
                 <hr class="border border-info" />
                 <p class="card-text">
@@ -238,14 +238,14 @@
                     to convert your <br />
                     Word to PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
             </div>
         </div>
-        <div class="card bg-FCF6FF border border-success w-18 my-3">
-            <div class="card-body">
+        <div class="card bg-FCF6FF converter-tools-card border border-success w-18 my-3">
+            <div class="card-body converter-tools">
                 <h5 class="card-title fw-bold">PNG To PDF</h5>
                 <hr class="border border-success" />
                 <p class="card-text">
@@ -254,7 +254,7 @@
                     Excel file to editable <br />
                     PDF file
                 </p>
-                <div class="d-flex justify-content-end align-items-center">
+                <div class="converter-tools-footer d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
                     <a href="javascript::void(0)" class="stretched-link"></a>
                 </div>
@@ -331,7 +331,6 @@
     <img src="{{ asset('assets/icons/newsletter.svg') }}" class="w-75" alt="" srcset="">
 </div>
 {{-- /* -------------------------- newsletter ends -------------------------- */ --}}
-
 
 @endsection
 

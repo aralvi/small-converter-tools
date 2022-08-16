@@ -122,3 +122,24 @@
 }
 
 /* ============ mobile view .end// ============ */
+
+@media(max-width: 991px) {
+
+    .converter-tools-card{
+        border: none !important;
+        width: 10rem;
+        padding: 0px;
+    }
+    .converter-tools-card h5{
+        font-size: small;
+    }
+    .converter-tools-card .converter-tools> hr,.converter-tools-card .converter-tools>p {
+        display:  none;
+    }
+    .converter-tools-card .converter-tools-footer{
+        justify-content: center !important;
+    }
+    .converter-tools-card .converter-tools-footer img{
+        width: 40px;
+    }
+}
