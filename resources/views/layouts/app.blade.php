@@ -20,7 +20,7 @@
 </style>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg bg-white">
         <div class="container">
             <a class="navbar-brand" href="{{ route('/') }}">
                 <img src="{{ asset('assets/icons/logo.svg') }}" alt="" width="300"

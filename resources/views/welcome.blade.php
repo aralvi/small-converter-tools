@@ -71,7 +71,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/word-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-word-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
