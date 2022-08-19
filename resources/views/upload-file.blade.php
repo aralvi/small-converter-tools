@@ -22,17 +22,15 @@
 
 
 <div class="container my-5">
-    <div class="row">
         <h4 class="text-center">How To Convert A PDF To Word Online:</h4>
-        <div class="col-lg-12 m-auto d-flex justify-content-evenly align-items-center">
+        <div class="m-auto d-flex justify-content-evenly align-items-center">
             <img src="{{asset('assets/icons/instructions.svg')}}" alt="" srcset="">
-            <div >
+            <div>
                 <p><strong>Step 1:</strong>&nbsp;&nbsp; these are the steps for conversion</p>
                 <p><strong>Step 2:</strong>&nbsp;&nbsp; these are the steps for conversion</p>
                 <p><strong>Step 3:</strong>&nbsp;&nbsp; these are the steps for conversion</p>
             </div>
         </div>
-    </div>
 
 
         <div class="row text-center">
