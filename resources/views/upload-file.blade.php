@@ -5,15 +5,15 @@
     <h2 class="text-capitalize text-center"><img src="{{asset('assets/icons/word-to-pdf.svg')}}" width="35px" alt="" srcset=""> {{str_replace('-',' ',$name)}}</h2>
         <p class="text-center">Quick and easy way to convert your PDF to <br> editable Word document</p>
         <div class="d-flex flex-column">
-            <div class="w-25 m-auto">
+            <div class="w-25 m-auto col-sm-12">
                 <label for="files" class="btn border form-control bg-537895 text-white"><img src="{{asset('assets/icons/desktop.svg')}}" alt="" srcset=""> Choose File</label>
                 <input id="files" class="form-control" style="visibility:hidden;" type="file">
             </div>
-            <div class="w-25 m-auto">
+            <div class="w-25 m-auto col-sm-12">
                 <label for="files" class="btn border form-control"><img src="{{asset('assets/icons/dropbox.svg')}}" alt="" srcset=""> Dropbox</label>
                 <input id="files" class="form-control" style="visibility:hidden;" type="file">
             </div>
-            <div class="w-25 m-auto">
+            <div class="w-25 m-auto col-sm-12">
                 <label for="files" class="btn border form-control"><img src="{{asset('assets/icons/drive.svg')}}" alt="" srcset=""> Google Drive</label>
                 <input id="files" class="form-control" style="visibility:hidden;" type="file">
             </div>
@@ -36,7 +36,6 @@
 
 
         <div class="row text-center">
-            <h2 class="my-3 fw0vold">Why Choose Small Convertrer Tools</h2>
             <div class="col-md-4 col-sm-6 mb-md-4">
                 <img src="{{ asset('assets/icons/lock-filled.svg') }}" width="40" height="40" class="mb-3" alt="icon" srcset="">
                 <p class="fw-bolder">Private Processing</p>
