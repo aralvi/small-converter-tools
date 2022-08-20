@@ -13,7 +13,7 @@
             <div class="w-75 m-auto">
                 <a class="btn border border-danger text-danger" type="button" ><img src="{{asset('assets/icons/social-icons/google.svg')}}" alt="" srcset=""> Login with Google</a>&nbsp; &nbsp;
                 <a class="btn border border-primary text-primary" type="button" ><img src="{{asset('assets/icons/social-icons/fb.svg')}}" alt="" srcset=""> Login with Facebook</a>
-                <form action="{{route('login')}}" method="post">
+                <form action="{{route('register')}}" method="post">
                     @csrf
                     <div class="form-floating my-3">
                         <input type="first_name" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required   id="floatingInputGrid" placeholder="name@example.com" >
