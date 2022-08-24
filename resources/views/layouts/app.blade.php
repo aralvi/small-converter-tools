@@ -145,24 +145,20 @@
                         @endif --}}
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link" type="button" class="btn btn-outline-success" aria-current="page"
+                                        href="{{ route('login') }}">Login</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link btn btn-outline-success rounded-pill" type="button" aria-current="page"
+                                        href="{{ route('register') }}">Sign Up</a>
                                 </li>
                             @endif
-                            <li class="nav-item mx-3">
-                                <a class="nav-link" type="button" class="btn btn-outline-success" aria-current="page"
-                                    href="{{ route('login') }}">Login</a>
-                            </li>
-                            <li class="nav-item mx-3">
-                                <a class="nav-link btn btn-outline-success rounded-pill" type="button" aria-current="page"
-                                    href="{{ route('register') }}">Sign Up</a>
-                            </li>
                         @else
                         <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="javascript::coid(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -249,7 +245,7 @@
     </footer>
     {{-- /* -------------------------- footer starts -------------------------- */ --}}
     @endguest
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/bootstrap-5.2.0-dist/js/bootstrap.min.js') }}"></script>
     @yield('script')

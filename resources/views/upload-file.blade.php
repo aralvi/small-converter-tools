@@ -1,24 +1,54 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="jumbotron bg-light">
-    <h2 class="text-capitalize text-center"><img src="{{asset('assets/icons/word-to-pdf.svg')}}" width="35px" alt="" srcset=""> {{str_replace('-',' ',$name)}}</h2>
-        <p class="text-center">Quick and easy way to convert your PDF to <br> editable Word document</p>
-        <div class="d-flex flex-column">
-            <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
-                <label for="files" class="btn border form-control bg-537895 text-white"><img src="{{asset('assets/icons/desktop.svg')}}" alt="" srcset=""> Choose File</label>
-                <input id="files" class="form-control" style="visibility:hidden;" type="file">
-            </div>
-            <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
-                <label for="files" class="btn border form-control"><img src="{{asset('assets/icons/dropbox.svg')}}" alt="" srcset=""> Dropbox</label>
-                <input id="files" class="form-control" style="visibility:hidden;" type="file">
-            </div>
-            <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
-                <label for="files" class="btn border form-control"><img src="{{asset('assets/icons/drive.svg')}}" alt="" srcset=""> Google Drive</label>
-                <input id="files" class="form-control" style="visibility:hidden;" type="file">
-            </div>
-        </div>
-</div>
+<section class="bg-light">
+  <div class="container  py-3 vh-75">
+      <h2 class="text-capitalize text-center"><img src="{{asset('assets/icons/word-to-pdf.svg')}}" width="35px" alt="" srcset=""> {{str_replace('-',' ',$name)}}</h2>
+      <form action="" method="post">
+
+          <div id="file-selection">
+
+              <p class="text-center">Quick and easy way to convert your PDF to <br> editable Word document</p>
+              <div class="d-flex flex-column">
+                  <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
+                      <label for="browse-file" class="btn btn-lg border form-control bg-537895 text-white"><img src="{{asset('assets/icons/desktop.svg')}}" alt="" srcset=""> Choose File</label>
+                      <input id="browse-file" class="form-control" onchange="progressRun()" style="visibility:hidden;" type="file">
+                  </div>
+                  <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
+                      <label for="dropbox-file" class="btn btn-lg border form-control"><img src="{{asset('assets/icons/dropbox.svg')}}" alt="" srcset=""> Dropbox</label>
+                      <input id="dropbox-file" class="form-control" style="visibility:hidden;" type="file">
+                  </div>
+                  <div class=" m-auto col-sm-12 col-md-6 col-lg-3">
+                      <label for="drive-file" class="btn btn-lg border form-control"><img src="{{asset('assets/icons/drive.svg')}}" alt="" srcset=""> Google Drive</label>
+                      <input id="drive-file" class="form-control" style="visibility:hidden;" type="file">
+                  </div>
+              </div>
+          </div>
+          <div class="d-none justify-content-center align-items-center flex-column" id="file-uploading">
+              <p class="text-center">{{str_replace('-',' ',$name)}}</p>
+              <div class="progressbar position-relative w-100">
+                  <span class="progress position-absolute bg-537895"></span>
+              </div>
+              <img class="py-5" src="{{asset('assets/icons/pdf.svg')}}" alt="" srcset="">
+              <p>Uploading (<small class="counter">0</small>)</p>
+          </div>
+          <div id="select-conversion" class="d-none">
+              <p class="text-center">Convert PDF file to Word file</p>
+              <div class=" container">
+                  <div class="row">
+                      <div class="col-3 text-center bg-white">
+                          <img src="{{asset('assets/icons/pdf.svg')}}" width="60" alt="" srcset="">
+                          <p class="file-name"></p>
+                      </div>
+                      <div class="col-6">fdfd</div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+
+</section>
+
 
 
 <div class="container my-5">
@@ -93,4 +123,39 @@
   </div>
 </div>
 </div>
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        $('#file-uploading').hide()
+    })
+
+    var progress = $('.progressbar .progress')
+    function counterInit( fValue, lValue ) {
+        var counter_value = parseInt( $('.counter').text() );
+        counter_value++;
+        if( counter_value >= fValue && counter_value <= lValue ) {
+            $('.counter').text( counter_value + '%' );
+            progress.css({ 'width': counter_value + '%' });
+            setTimeout( function() {
+                counterInit( fValue, lValue );
+            }, 30 );
+        }else{
+            setTimeout( function() {
+                $('#file-uploading').removeClass('d-flex').addClass('d-none')
+                $file_name = $('#browse-file').val().split('\\')[$('#browse-file').val().split('\\').length -1];
+                $('#select-conversion').removeClass('d-none')
+                $('.file-name').text($file_name)
+            }, 1000 );
+
+        }
+    }
+
+    function progressRun() {
+        $('#file-selection').hide()
+        $('#file-uploading').addClass('d-flex').removeClass('d-none')
+        counterInit( 0, 100 );
+
+    }
+</script>
 @endsection
