@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="bg-light">
-  <div class="container  py-3 vh-75">
+<section class="bg-light" id="file-uploading-form-section">
+  <div class="container  py-3 vh-75" id="file-uploading-form">
       <h2 class="text-capitalize text-center"><img src="{{asset('assets/icons/word-to-pdf.svg')}}" width="35px" alt="" srcset=""> {{str_replace('-',' ',$name)}}</h2>
       <form action="" method="post">
 
@@ -24,23 +24,41 @@
                   </div>
               </div>
           </div>
-          <div class="d-none justify-content-center align-items-center flex-column" id="file-uploading">
+          <div class="row d-none " id="file-uploading">
               <p class="text-center">{{str_replace('-',' ',$name)}}</p>
-              <div class="progressbar position-relative w-100">
-                  <span class="progress position-absolute bg-537895"></span>
+              <div class="d-flex px-0 justify-content-center align-items-center flex-column border">
+                  <div class="progressbar position-relative w-100">
+                      <span class="progress position-absolute bg-537895"></span>
+                  </div>
+                  <img class="py-5" src="{{asset('assets/icons/pdf.svg')}}" alt="" srcset="">
+                  <p>Uploading (<small class="counter">0</small>)</p>
+
               </div>
-              <img class="py-5" src="{{asset('assets/icons/pdf.svg')}}" alt="" srcset="">
-              <p>Uploading (<small class="counter">0</small>)</p>
           </div>
-          <div id="select-conversion" class="d-none">
+          <div id="select-conversion"  class="d-none">
               <p class="text-center">Convert PDF file to Word file</p>
               <div class=" container">
                   <div class="row">
-                      <div class="col-3 text-center bg-white">
+                      <div class="col-4 text-center bg-white py-5 border border-2 h-100">
                           <img src="{{asset('assets/icons/pdf.svg')}}" width="60" alt="" srcset="">
                           <p class="file-name"></p>
                       </div>
-                      <div class="col-6">fdfd</div>
+                      <div class="col-8 ">
+                        <div class="row ms-0 bg-light h-100">
+                          <div class="col-6 h-75 py-3">
+                            <div class="form-check border h-75 bg-F9FDFF ps-5 pt-3">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                Convert to Word
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 h-25">
+
+                              <input type="submit" class="form-control bg-537895 text-white" value="Convert">
+                          </div>
+                        </div>
+                      </div>
                   </div>
               </div>
           </div>
@@ -154,6 +172,7 @@
     function progressRun() {
         $('#file-selection').hide()
         $('#file-uploading').addClass('d-flex').removeClass('d-none')
+        $('#file-uploading-form-section').removeClass('bg-light')
         counterInit( 0, 100 );
 
     }
