@@ -28,3 +28,4 @@ Route::get('tool/{name}',function ($name)
     return view('upload-file',compact('name'));
 })->name('tools');
 Route::post('image-to-pdf',[DocumentController::class, 'imageToPdf'])->name('image-to-pdf');
+Route::post('png-to-jpg',[DocumentController::class, 'pngToJpg'])->name('png-to-jpg');

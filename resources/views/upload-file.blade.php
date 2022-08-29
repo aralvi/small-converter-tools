@@ -4,7 +4,7 @@
 <section class="bg-light" id="file-uploading-form-section">
   <div class="container  py-3 vh-75" id="file-uploading-form">
       <h2 class="text-capitalize text-center"><img src="{{asset('assets/icons/word-to-pdf.svg')}}" width="35px" alt="" srcset=""> {{str_replace('-',' ',$name)}}</h2>
-      <form action="{{route('image-to-pdf')}}" method="post" enctype="multipart/form-data">
+      <form action="{{route('png-to-jpg')}}" method="post" enctype="multipart/form-data">
         @csrf
           <div id="file-selection">
 
@@ -157,7 +157,7 @@
             progress.css({ 'width': counter_value + '%' });
             setTimeout( function() {
                 counterInit( fValue, lValue );
-            }, 30 );
+            }, 10 );
         }else{
             setTimeout( function() {
                 $('#file-uploading').removeClass('d-flex').addClass('d-none')
