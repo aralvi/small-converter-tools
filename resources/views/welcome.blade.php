@@ -87,7 +87,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/excel-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-excel-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/ppt-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-ppt-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/ebooks-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-ebooks-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -134,7 +134,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/iwork-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-iwork-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-word.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-pdf-to-word')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -170,7 +170,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-excel.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-pdf-to-excel')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -186,7 +186,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-ppt.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-pdf-to-ppt')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -205,7 +205,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-pdf-to-jpg')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -221,7 +221,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/pdf-to-img.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-pdf-to-png')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -240,7 +240,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-jpg-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>
@@ -256,7 +256,7 @@
                 </p>
                 <div class="d-flex justify-content-end align-items-center">
                     <img src="{{ asset('assets/icons/img-to-pdf.svg') }}" alt="" srcset="" />
-                    <a href="javascript::void(0)" class="stretched-link"></a>
+                    <a href="{{route('tools','convert-png-to-pdf')}}" class="stretched-link"></a>
                 </div>
             </div>
         </div>

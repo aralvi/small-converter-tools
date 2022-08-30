@@ -23,9 +23,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('tool/{name}',function ($name)
-{
-    return view('upload-file',compact('name'));
-})->name('tools');
+Route::get('tool/{name}', [DocumentController::class, 'index'])->name('tools');
 Route::post('image-to-pdf',[DocumentController::class, 'imageToPdf'])->name('image-to-pdf');
-Route::post('png-to-jpg',[DocumentController::class, 'pngToJpg'])->name('png-to-jpg');
+Route::post('image-format-change/{from},{to}',[DocumentController::class, 'changeImageFormat'])->name('change-image-format');

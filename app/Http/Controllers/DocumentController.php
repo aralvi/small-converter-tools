@@ -9,40 +9,56 @@ use ZipArchive;
 
 class DocumentController extends Controller
 {
+
+    public function index($name)
+    {
+        $image = str_replace('convert-','',$name);
+        $name = config('constants.' . $name);
+        return view('upload-file',compact('name','image'));
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                           image to pdf converter                           */
+    /* -------------------------------------------------------------------------- */
     public function imageToPdf(Request $request)
     {
         ini_set('max_execution_time', 1000000000000000);
         $data = ['images'=> $request->images];
         foreach ($request->images as $key => $image) {
             $imageName = $image->getClientOriginalName();
-            $image->move(public_path('/uploadedimages'), $imageName);
+            $image->move(public_path(config('constants.directory')), $imageName);
         }
         $pdf =  PDF::loadView('image-to-pdf',$data);
-        return $pdf->download('image-to-pdf.pdf');
+        $pdf->save(public_path(config('constants.directory')).'/image-to-pdf.pdf');
+        return back();
 
     }
-    // public function pngToJpg(Request $request)
-    // {
-    //     ini_set('max_execution_time', 1000000000000000);
-    //     foreach ($request->images as $key => $image) {
-    //         $test = rtrim($image->getClientOriginalName(), $image->getClientOriginalExtension()).'jpg';
-    //         $image->move(public_path('/png-to-jpg'), $test);
-    //     }
-    //     return 'changed';
-
-    // }
-    public function pngToJpg(Request $request)
+    /* -------------------------------------------------------------------------- */
+    /*                             change image format                            */
+    /* -------------------------------------------------------------------------- */
+    public function changeImageFormat(Request $request,$from,$to)
     {
         ini_set('max_execution_time', 1000000000000000);
-        $zip = new ZipArchive;
-        $path_time = time();
+        $destination = config('constants.directory').'/image-conversion-' . time();
         foreach ($request->images as $image) {
-            $test = rtrim($image->getClientOriginalName(), $image->getClientOriginalExtension()).'jpg';
-            $image->move(public_path('/uploadedimages/image-conversion-'. $path_time), $test);
+            $test = rtrim($image->getClientOriginalName(), $image->getClientOriginalExtension()).$to;
+            $image->move(public_path($destination), $test);
         }
-        $fileName = 'uploadedimages/image-conversion-' . $path_time.'/myFiles.zip';
+       return $this->createZipFile($destination);
+
+        return 'changed';
+
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                               create zip file                              */
+    /* -------------------------------------------------------------------------- */
+    public function createZipFile($path)
+    {
+        $zip = new ZipArchive;
+        $fileName = $path. '/myFiles.zip';
         if ($zip->open(public_path($fileName), ZipArchive::CREATE) === TRUE) {
-            $files = File::files(public_path('/uploadedimages/image-conversion-' . $path_time));
+            $files = File::files(public_path($path));
             foreach ($files as $key => $value) {
                 $relativeNameInZipFile = basename($value);
                 $zip->addFile($value, $relativeNameInZipFile);
@@ -52,7 +68,5 @@ class DocumentController extends Controller
         }
 
         return response()->download(public_path($fileName));
-        return 'changed';
-
     }
 }
